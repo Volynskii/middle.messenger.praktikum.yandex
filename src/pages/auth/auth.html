@@ -1,0 +1,13 @@
+{{#> layout/layout title="Auth Page"}}
+<main class="auth">
+<div class="wrapper">
+    <div class="title">Вход</div>
+    <form>
+        {{> input/input2 label="username" type="text" labelValue="Логин"}}
+        {{> input/input2 label="password" type="password" labelValue="Пароль"}}
+        {{> input/input-submit value="Login"}}
+        <a>Нет аккаунта?</a>
+    </form>
+</div>
+</main>
+{{/ layout/layout}}
