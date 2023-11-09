@@ -16,11 +16,11 @@
 - http://localhost:3000/notFound страница не найдена
 - http://localhost:3000/serverError   серверная ошибка
 
-  Сайт https://dainty-griffin-69e4de.netlify.app/
+  Сайт https://curious-meerkat-f49c42.netlify.app/
 
-- https://dainty-griffin-69e4de.netlify.app/src/pages/auth/auth страница авторизации
-- https://dainty-griffin-69e4de.netlify.app/src/pages/registration/registration страница регистрации
-- https://dainty-griffin-69e4de.netlify.app/src/pages/editprofile/editprofile страница редактирования профиля
-- https://dainty-griffin-69e4de.netlify.app/src/pages/chat/chat страница чата
-- https://dainty-griffin-69e4de.netlify.app/src/pages/404page/404page страница не найдена
-- https://dainty-griffin-69e4de.netlify.app/src/pages/500page/500page серверная ошибка
+- https://curious-meerkat-f49c42.netlify.app/src/pages/auth/auth страница авторизации
+- https://curious-meerkat-f49c42.netlify.app/src/pages/registration/registration страница регистрации
+- https://curious-meerkat-f49c42.netlify.app/src/pages/editprofile/editprofile страница редактирования профиля
+- https://curious-meerkat-f49c42.netlify.app/src/pages/chat/chat страница чата
+- https://curious-meerkat-f49c42.netlify.app/src/pages/404page/404page страница не найдена
+- https://curious-meerkat-f49c42.netlify.app/src/pages/500page/500page серверная ошибка
