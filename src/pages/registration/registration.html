@@ -1,19 +1,18 @@
-{{#> layout/layout title="Registration Page"}}
-    <main class="page">
-        <h3 class="title">Регистрация</h3>
-        <form class="form">
-            <div class="inputs">
-                {{> input/input class="input" type="email" placeholder="Email" name="email" }}
-                {{> input/input class="input" type="text" placeholder="Имя" name="first_name"}}
-                {{> input/input class="input" type="text" placeholder="Фамилия" name="second_name"}}
-                {{> input/input class="input" type="text" placeholder="Login" name="login"}}
-                {{> input/input class="input" type="tel" placeholder="Tелефон" name="phone"}}
-                {{> input/input class="input" type="password" placeholder="Пароль" name="password"}}
-            </div>
-            <div class="buttons">
-                {{> button/button href="/src/pages/chatWindow/chatWindow.html" label="Registration" }}
-                {{> button/button  href="/" label="Login" }}
-            </div>
-        </form>
-    </main>
+{{#> layout/layout title="Auth Page"}}
+<main class="registration">
+<div class="wrapper">
+    <div class="title">Регистрация</div>
+    <form>
+        {{> input/input2 label="email" type="text" labelValue="Почта"}}
+        {{> input/input2 label="login" type="text" labelValue="Логин"}}
+        {{> input/input2 label="first_name" type="text" labelValue="Имя"}}
+        {{> input/input2 label="second_name" type="text" labelValue="Фамилия"}}
+        {{> input/input2 label="phone" type="text" labelValue="Телефон"}}
+        {{> input/input2 label="oldPassword" type="password" labelValue="Пароль"}}
+        {{> input/input2 label="newPassword" type="password" labelValue="Пароль(ещё раз)"}}
+        {{> input/input-submit value="Register"}}
+        <a>Войти</a>
+    </form>
+</div>
+</main>
 {{/ layout/layout}}

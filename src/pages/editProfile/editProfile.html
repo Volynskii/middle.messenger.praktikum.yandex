@@ -1,0 +1,42 @@
+{{#> layout/layout title="Edit Page"}}
+<body class="edit">
+<main class="wrapper">
+    <form>
+        {{> avatar/avatar }}
+        {{> input/input2 label="email" type="text" labelValue="Почта"}}
+        {{> input/input2 label="login" type="text" labelValue="Логин"}}
+        {{> input/input2 label="first_name" type="text" labelValue="Имя"}}
+        {{> input/input2 label="second_name" type="text" labelValue="Фамилия"}}
+        {{> input/input2 label="phone" type="text" labelValue="Телефон"}}
+        {{> input/input2 label="oldPassword" type="password" labelValue="Пароль"}}
+        {{> input/input2 label="newPassword" type="password" labelValue="Пароль(ещё раз)"}}
+        {{> input/input-submit value="Save"}}
+    </form>
+</main>
+</body>
+<script>
+    // Получаем ссылки на элементы
+    const imageInput = document.getElementById("imageInput");
+    const uploadedImage = document.getElementById("uploadedImage");
+
+    // Добавляем обработчик события для изменения файла
+    imageInput.addEventListener("change", function (e) {
+        const file = e.target.files[0];
+
+        if (file) {
+            // Создаем объект FileReader для чтения файла
+            const reader = new FileReader();
+
+            reader.onload = function (event) {
+                // Устанавливаем изображение в атрибут src элемента img
+                uploadedImage.src = event.target.result;
+            };
+
+            // Читаем файл как URL-адрес данных
+            reader.readAsDataURL(file);
+        } else {
+            uploadedImage.src = ""; // Если файл не выбран, очищаем изображение
+        }
+    });
+</script>
+{{/ layout/layout}}

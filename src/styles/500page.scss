@@ -1,0 +1,19 @@
+ .not-found {
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: #1E1E1E;
+
+    .title {
+      font-size: 3rem;
+      color: white;
+    }
+
+    .message {
+      font-size: 2rem;
+    }
+  }

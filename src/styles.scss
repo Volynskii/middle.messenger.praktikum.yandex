@@ -1,10 +1,101 @@
-@import "styles/_common.scss";
-@import "styles/_500Page.scss";
-@import "styles/_chatWindow.scss";
-@import "styles/_settingsPage.scss";
+@import "styles/auth";
+@import "styles/registration";
+@import "styles/editProfile";
+@import "styles/chat";
+@import "styles/404page";
+@import "styles/500page";
 
-@import "styles/_layout.scss";
-@import "styles/_button.scss";
-@import "styles/_input.scss";
-@import "styles/_message.scss";
-@import "styles/_userItem.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none; /* Remove the bullet points */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  /* Add any additional styles as needed */
+}
+
+body {
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  width: 340px;
+  padding-bottom: 40px;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.14);
+}
+.title {
+  color: #1E1E1E;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 100% */
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  color: #999;
+  font-family: Inter,serif;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 9px; /* 100% */
+  cursor: pointer;
+}
+input {
+  color: #1E1E1E;
+  font-family: Inter,serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 13px; /* 100% */
+  height: 28px;
+  border: 0;
+  border-bottom: 1px solid black;
+
+}
+input:focus {
+  outline: none;
+  border-bottom: 1px solid #3369F3;
+}
+
+input[type="submit"] {
+  background-color: #007bff; /* Background color */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Padding */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  border-radius: 5px; /* Add rounded corners */
+}
+
+/* Change styles on hover */
+input[type="submit"]:hover {
+  background-color: #0056b3; /* Background color on hover */
+  color: #fff; /* Text color on hover */
+}
+p {
+  text-align: center;
+  color: #3369F3;
+  font-family: Inter,serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 11px; /* 100% */
+}
