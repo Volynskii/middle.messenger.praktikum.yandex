@@ -16,11 +16,11 @@
 - http://localhost:3000/notFound страница не найдена
 - http://localhost:3000/serverError   серверная ошибка
 
-  Сайт https://statuesque-praline-d706c9.netlify.app/
+  Сайт https://dainty-griffin-69e4de.netlify.app/
 
-- https://statuesque-praline-d706c9.netlify.app/src/pages/auth/auth страница авторизации
-- https://statuesque-praline-d706c9.netlify.app/src/pages/registration/registration страница регистрации
-- https://statuesque-praline-d706c9.netlify.app/src/pages/editprofile/editprofile страница редактирования профиля
-- https://statuesque-praline-d706c9.netlify.app/src/pages/chat/chat страница чата
-- https://statuesque-praline-d706c9.netlify.app/src/pages/404page/404page страница не найдена
-- https://statuesque-praline-d706c9.netlify.app/src/pages/500page/500page серверная ошибка
+- https://dainty-griffin-69e4de.netlify.app/src/pages/auth/auth страница авторизации
+- https://dainty-griffin-69e4de.netlify.app/src/pages/registration/registration страница регистрации
+- https://dainty-griffin-69e4de.netlify.app/src/pages/editprofile/editprofile страница редактирования профиля
+- https://dainty-griffin-69e4de.netlify.app/src/pages/chat/chat страница чата
+- https://dainty-griffin-69e4de.netlify.app/src/pages/404page/404page страница не найдена
+- https://dainty-griffin-69e4de.netlify.app/src/pages/500page/500page серверная ошибка
