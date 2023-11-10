@@ -1,28 +1,3 @@
-input {
-  border: none; /* Remove borders */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margin */
-  background: none; /* Remove background */
-  font-size: 1rem; /* Set font size to a preferred value */
-  font-family: inherit; /* Use the font-family of the parent element */
-  color: inherit; /* Use the text color of the parent element */
-  outline: none; /* Remove the focus outline */
-  /* Add any additional styles as needed */
-}
-
-body {
-  margin:0;
-  color: black;
-}
-
-::-webkit-scrollbar {
-  width: 0;
-}
-
-/* Hide scrollbar on Firefox */
-
-
-
 .container {
   display: flex;
   min-height: 100vh;
@@ -33,34 +8,35 @@ body {
   flex-direction: column;
   width: 25%;
   min-width: 350px;
-  /*background: #f0f0f0;*/
-  border: 1px solid #EAEAEA;
-
   height: 100vh;
   position: sticky; /* Ensure the container has a defined position */
   top: 0;
   border: 1px solid #ccc; /* Just for visualization */
   overflow: hidden;
-
 }
 
-.sidebar input {
+.wrapper-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.sidebar-input {
   margin: 0 10px;
   border-radius: 5px;
   background: #EFEFEF;
   height: 32px;
   outline: 0;
-  padding: 0;
+  padding: 10px;
 }
-.sidebar input:focus {
+.sidebar-input:focus {
   outline: none;
   border-bottom: 1px solid #3369F3;
 }
 .sidebar h1 {
   color: #999;
-
   text-align: right;
-  font-family: Inter;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
@@ -68,11 +44,9 @@ body {
   padding-right: 10px;
 }
 
-
 .chat-list {
   list-style: none;
   padding: 0;
-
   height: 100vh;
   overflow-y: auto;
 }
@@ -104,16 +78,12 @@ body {
 .list-item__name {
   margin-bottom: auto;
   color: #1E1E1E;
-  font-family: Inter,serif;
   font-size: 13px;
   font-style: normal;
   font-weight: 600;
   line-height: 13px; /* 100% */
 }
 .list-item__message {
-  color: #999;
-  color: black;
-  font-family: Inter,serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
@@ -128,7 +98,6 @@ body {
 }
 
 
-
 .list-item__date {
   display: flex;
   flex-direction: column;
@@ -141,7 +110,6 @@ body {
 .list-item__time {
   color: #999;
   text-align: right;
-  font-family: Inter,serif;
   font-size: 9px;
   font-style: normal;
   font-weight: 500;
@@ -156,7 +124,6 @@ body {
   background: #3369F3;
   color: #FFF;
   text-align: center;
-  font-family: Inter;
   font-size: 11px;
   font-style: normal;
   font-weight: 500;
@@ -240,7 +207,6 @@ body {
     display: flex;
     flex-direction: column;
     flex: 1 1 500px;
-
     position: sticky;
     top: 0;
     overflow-y: auto;
@@ -258,7 +224,6 @@ body {
     display: flex;
     flex: 0 0 32px;
     margin-right: 20px;
-
     background-image: url('/public/upload.svg');
     background-size: cover; /* You can adjust this property to control how the image is sized. */
     background-repeat: no-repeat; /* Prevent the image from repeating. */
@@ -289,14 +254,12 @@ body {
     display: flex;
     flex: 0 0 32px;
     margin-left: 20px;
-    background: transparent;
     border: 0;
     height: auto;
     padding: 0;
-
-    background-image: url('/public/submit.svg');
     background-size: cover; /* You can adjust this property to control how the image is sized. */
-    background-repeat: no-repeat; /* Prevent the image from repeating. */
-    background-position: center center; /* Center the image both horizontally and vertically. */
+    /* Prevent the image from repeating. */
+    /* Center the image both horizontally and vertically. */
+    background: transparent url('/public/submit.svg') no-repeat center center;
   }
 }
