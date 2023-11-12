@@ -1,0 +1,22 @@
+.registration {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.wrapper-registration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 340px;
+  padding-bottom: 40px;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.14);
+}
+
+.title-registration {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}

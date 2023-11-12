@@ -1,0 +1,265 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  min-width: 350px;
+  height: 100vh;
+  position: sticky; /* Ensure the container has a defined position */
+  top: 0;
+  border: 1px solid #ccc; /* Just for visualization */
+  overflow: hidden;
+}
+
+.wrapper-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.sidebar-input {
+  margin: 0 10px;
+  border-radius: 5px;
+  background: #EFEFEF;
+  height: 32px;
+  outline: 0;
+  padding: 10px;
+}
+.sidebar-input:focus {
+  outline: none;
+  border-bottom: 1px solid #3369F3;
+}
+.sidebar h1 {
+  color: #999;
+  text-align: right;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 12px; /* 100% */
+  padding-right: 10px;
+}
+
+.chat-list {
+  list-style: none;
+  padding: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.chat-list li {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  padding: 12px 10px;
+}
+
+.list-item {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.list-item__preview {
+  height: 47px;
+  border-radius: 50%;
+  background: #EFEFEF;
+  margin-right: 10px;
+  flex: 0 0 47px;
+}
+
+.list-item__info {
+  flex: 1 0 193px;
+}
+
+.list-item__name {
+  margin-bottom: auto;
+  color: #1E1E1E;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 13px; /* 100% */
+}
+.list-item__message {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 15px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-height: 30px;
+  margin: 0 0 3px;
+  position: relative;
+}
+
+
+.list-item__date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 47px;
+  margin-left: 10px;
+  flex: 0 0 47px;
+}
+.list-item__time {
+  color: #999;
+  text-align: right;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 13px; /* 144.444% */
+}
+.list-item__unread {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background: #3369F3;
+  color: #FFF;
+  text-align: center;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 12px; /* 109.091% */
+  border-radius: 50%;
+
+  p {
+    color: white;
+  }
+}
+
+
+
+
+.main-chat {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 0 20px;
+  position: sticky;
+  top: 0;
+
+
+  .main-chat__header {
+    flex: 0 0 90px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  .main-chat__empty {
+    display: flex;
+    flex: 1 1;
+  }
+
+  .main-chat__date {
+    color: black;
+    display: flex;
+    justify-content: center;
+    flex: 1 1;
+    margin-bottom: 30px;
+  }
+
+  .main-chat__user-actions {
+    border: 1px solid #EAEAEA;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex: 1 1;
+    border-radius: 30px;
+    padding: 15px;
+    color: #1E1E1E;
+  }
+  .main-chat__user-actions li {
+    margin-bottom: 24px;
+  }
+  .main-chat__user-actions li:last-child {
+    margin-bottom: 0;
+  }
+
+
+  .chat__friend-message,
+  .chat__your-message
+  {
+    width: 66%;
+    border-radius: 30px;
+    padding: 20px;
+    background: #F8F8F8;
+    margin-bottom: 20px;
+    color: black;
+  }
+
+  .chat__your-message {
+    margin-left: auto;
+    background: #E4EDFD;
+  }
+
+  .chat {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 500px;
+    position: sticky;
+    top: 0;
+    overflow-y: auto;
+    padding-top: 40px;
+  }
+
+
+  .input-bottom {
+    display: flex;
+    height: 32px;
+    margin-top: auto;
+    width: 100%;
+  }
+  .input__upload-button {
+    display: flex;
+    flex: 0 0 32px;
+    margin-right: 20px;
+    background-image: url('/public/upload.svg');
+    background-size: cover; /* You can adjust this property to control how the image is sized. */
+    background-repeat: no-repeat; /* Prevent the image from repeating. */
+    background-position: center center; /* Center the image both horizontally and vertically. */
+  }
+  .input__form {
+    display: flex;
+    align-items: stretch;
+    flex: 1;
+  }
+  .input-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex: 1;
+  }
+  .input__message {
+    display: flex;
+    flex: 1;
+    border-radius: 30px;
+    background: #EFEFEF;
+    border: 0;
+    padding-left: 20px;
+
+  }
+
+  .submit {
+    display: flex;
+    flex: 0 0 32px;
+    margin-left: 20px;
+    border: 0;
+    height: auto;
+    padding: 0;
+    background-size: cover; /* You can adjust this property to control how the image is sized. */
+    /* Prevent the image from repeating. */
+    /* Center the image both horizontally and vertically. */
+    background: transparent url('/public/submit.svg') no-repeat center center;
+  }
+}

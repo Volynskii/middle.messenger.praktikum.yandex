@@ -1,0 +1,19 @@
+.error-page {
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: #1E1E1E;
+
+  .title-not-found {
+    font-size: 3rem;
+  }
+
+  .message {
+    font-size: 2rem;
+  }
+}
+

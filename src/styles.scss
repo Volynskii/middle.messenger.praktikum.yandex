@@ -1,0 +1,96 @@
+@import "styles/auth";
+@import "styles/registration";
+@import "styles/editProfile";
+@import "styles/chat";
+@import "styles/404page";
+@import "styles/500page";
+
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.black-color {
+  color: black;
+}
+
+.white-color {
+  color: white;
+}
+
+ul {
+  list-style-type: none; /* Remove the bullet points */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  /* Add any additional styles as needed */
+}
+
+
+body {
+  margin: 0;
+  font-family: Inter,serif;
+  color: #1E1E1E;
+}
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  text-align: center;
+  font-size: 20px;
+  line-height: 20px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+.label {
+  color: #999;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 9px; /* 100% */
+  cursor: pointer;
+}
+.input {
+  color: #1E1E1E;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 13px; /* 100% */
+  height: 28px;
+  border: 0;
+  border-bottom: 1px solid black;
+
+}
+.input:focus {
+  outline: none;
+  border-bottom: 1px solid #3369F3;
+}
+
+.input-submit {
+  background-color: #007bff; /* Background color */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Padding */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  border-radius: 5px; /* Add rounded corners */
+}
+
+
+/* Change styles on hover */
+.input-submit:hover {
+  background-color: #0056b3; /* Background color on hover */
+  color: #fff; /* Text color on hover */
+}
