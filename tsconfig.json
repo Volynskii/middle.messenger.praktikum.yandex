@@ -22,7 +22,9 @@
     ".eslintrc.cjs",
     "src", 
     "index.js",
-    "./vite.config.js"
+    "./vite.config.js",
+    "index.js",
+    "src/main.ts"
   ],
   "exclude": [
     "node_modules",

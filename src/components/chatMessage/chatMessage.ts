@@ -1,6 +1,5 @@
-
 import Block from '../../utils/Block';
-import {tmpl} from "./chatMessage.tmpl.ts";
+import { tmpl } from "./chatMessage.tmpl.ts";
 
 
 interface ChatMessageProps {
