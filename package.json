@@ -5,7 +5,8 @@
   "type": "module",
 
   "eslintIgnore": [
-    "dist/*"
+    "dist/*",
+    "main.js"
   ],
   "engines": {
     "node": ">=14.15.0"
