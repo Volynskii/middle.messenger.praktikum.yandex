@@ -3,10 +3,7 @@ module.exports = {
         "browser": true,
         "es2021": true
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:@typescript-eslint/recommended"
-    ],
+    "extends": "standard-with-typescript",
     "overrides": [
         {
             "env": {
@@ -20,16 +17,10 @@ module.exports = {
             }
         }
     ],
-    "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-
-        plugins: ['semi', 'quotes', "@typescript-eslint"]
-    rules: {
-        'semi/semi': ['error', 'always'],
-        'quotes/quotes': ['error', 'single'],
-        // ... other rules
-    },
+    "rules": {
+    }
 }
