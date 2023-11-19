@@ -4,7 +4,7 @@
         "stylelint-config-prettier-scss"
     ],
     "rules": {
-        "alpha-value-notation": "decimal",
+        "alpha-value-notation": "fraction",
         "selector-class-pattern": null,
         "scss/at-mixin-pattern": null,
         "scss/dollar-variable-pattern": null,
