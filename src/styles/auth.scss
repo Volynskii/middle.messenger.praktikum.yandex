@@ -9,10 +9,8 @@ h1 {
   height: 100vh;
   display: flex;
   flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  box-sizing: border-box;
   place-content: center;
+  box-sizing: border-box;
 }
 
 .wrapper-auth {
