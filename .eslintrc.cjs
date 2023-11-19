@@ -25,9 +25,11 @@ module.exports = {
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "plugins": [
-        "@typescript-eslint"
-    ],
-    "rules": {
-    }
+
+        plugins: ['semi', 'quotes', "@typescript-eslint"]
+    rules: {
+        'semi/semi': ['error', 'always'],
+        'quotes/quotes': ['error', 'single'],
+        // ... other rules
+    },
 }
