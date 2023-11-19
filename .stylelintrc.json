@@ -4,6 +4,8 @@
         "stylelint-config-prettier-scss"
     ],
     "rules": {
+        "semi": ["error", "always"],
+        "quotes": ["error", "double"],
         "alpha-value-notation": "number",
         "selector-class-pattern": null,
         "scss/at-mixin-pattern": null,
