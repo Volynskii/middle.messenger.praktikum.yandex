@@ -30,10 +30,12 @@
   outline: 0;
   padding: 10px;
 }
+
 .sidebar-input:focus {
   outline: none;
   border-bottom: 1px solid #3369F3;
 }
+
 .sidebar h1 {
   color: #999;
   text-align: right;
@@ -84,6 +86,7 @@
   font-weight: 600;
   line-height: 13px;
 }
+
 .list-item__message {
   font-size: 12px;
   font-style: normal;
@@ -98,7 +101,6 @@
   position: relative;
 }
 
-
 .list-item__date {
   display: flex;
   flex-direction: column;
@@ -108,6 +110,7 @@
   margin-left: 10px;
   flex: 0 0 47px;
 }
+
 .list-item__time {
   color: #999;
   text-align: right;
@@ -116,6 +119,7 @@
   font-weight: 500;
   line-height: 13px;
 }
+
 .list-item__unread {
   display: flex;
   justify-content: center;
@@ -136,8 +140,6 @@
   }
 }
 
-
-
 .main-chat {
   display: flex;
   flex-direction: column;
@@ -145,7 +147,6 @@
   margin: 0 20px;
   position: sticky;
   top: 0;
-
 
   .main-chat__header {
     flex: 0 0 90px;
@@ -178,9 +179,11 @@
     padding: 15px;
     color: #1E1E1E;
   }
+
   .main-chat__user-actions li {
     margin-bottom: 24px;
   }
+
   .main-chat__user-actions li:last-child {
     margin-bottom: 0;
   }
@@ -229,17 +232,20 @@
     background-repeat: no-repeat; /* Prevent the image from repeating. */
     background-position: center center; /* Center the image both horizontally and vertically. */
   }
+
   .input__form {
     display: flex;
     align-items: stretch;
     flex: 1;
   }
+
   .input-container {
     display: flex;
     flex-direction: row;
     align-items: stretch;
     flex: 1;
   }
+
   .input__message {
     display: flex;
     flex: 1;
@@ -247,7 +253,6 @@
     background: #EFEFEF;
     border: 0;
     padding-left: 20px;
-
   }
 
   .submit {

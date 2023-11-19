@@ -81,6 +81,7 @@ body {
   flex-direction: column;
   position: relative;
 }
+
 .label {
   color: #999;
   font-size: 9px;
@@ -89,6 +90,7 @@ body {
   line-height: 9px; /* 100% */
   cursor: pointer;
 }
+
 .input {
   color: #1E1E1E;
   font-size: 13px;
@@ -98,8 +100,8 @@ body {
   height: 28px;
   border: 0;
   border-bottom: 1px solid black;
-
 }
+
 .input:focus {
   outline: none;
   border-bottom: 1px solid #3369F3;
