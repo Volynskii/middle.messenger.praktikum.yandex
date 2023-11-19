@@ -12,7 +12,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "start": "npm run build && npm run dev",
+    "start": "tsc && vite build && node server.cjs",
     "server": "npm run build && node server.cjs",
     "build": "vite build",
     "preview": "vite preview"

@@ -4,9 +4,6 @@
         "stylelint-config-prettier-scss"
     ],
     "rules": {
-        "semi": ["error", "always"],
-        "quotes": ["error", "double"],
-        "alpha-value-notation": "number",
         "selector-class-pattern": null,
         "scss/at-mixin-pattern": null,
         "scss/dollar-variable-pattern": null,
@@ -15,6 +12,7 @@
     },
     "ignoreFiles": [
         "node_modules/*",
+        "normalize.scss",
         "dist/assets/*"
     ]
 }
