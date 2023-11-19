@@ -9,8 +9,8 @@ h1 {
   height: 100vh;
   display: flex;
   flex-wrap: wrap;
-  //align-content: center;
-  //justify-content: center;
+  align-content: center;
+  justify-content: center;
   box-sizing: border-box;
   place-content: center;
 }
@@ -21,7 +21,7 @@ h1 {
   align-items: center;
   width: 340px;
   padding-bottom: 40px;
-  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.14%);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.14);
 }
 
 .title-auth {

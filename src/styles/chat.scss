@@ -223,14 +223,15 @@
     margin-top: auto;
     width: 100%;
   }
+
   .input__upload-button {
     display: flex;
     flex: 0 0 32px;
     margin-right: 20px;
     background-image: url('/public/upload.svg');
-    background-size: cover; /* You can adjust this property to control how the image is sized. */
-    background-repeat: no-repeat; /* Prevent the image from repeating. */
-    background-position: center center; /* Center the image both horizontally and vertically. */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 
   .input__form {
@@ -262,9 +263,6 @@
     border: 0;
     height: auto;
     padding: 0;
-    background-size: cover; /* You can adjust this property to control how the image is sized. */
-    /* Prevent the image from repeating. */
-    /* Center the image both horizontally and vertically. */
-    background: transparent url('/public/submit.svg') no-repeat center center;
+    background: transparent url('/public/submit.svg') no-repeat center center / cover;
   }
 }
