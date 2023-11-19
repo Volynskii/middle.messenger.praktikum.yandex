@@ -13,6 +13,7 @@
     },
     "ignoreFiles": [
         "node_modules/*",
-        "dist/assets/*"
+        "dist/assets/*",
+        "main.js"
     ]
 }
