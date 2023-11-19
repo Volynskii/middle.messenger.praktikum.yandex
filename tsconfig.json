@@ -30,7 +30,6 @@
   ],
   "exclude": [
     "node_modules",
-    "dist/assets",
-    "main.js"
+    "dist/assets"
   ]
 }
