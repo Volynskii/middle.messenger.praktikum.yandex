@@ -1,8 +1,10 @@
-import './style.scss'
-import Handlebars from 'handlebars';
+window.addEventListener('DOMContentLoaded', () => {
+    const root = document.querySelector('#app');
 
-const source = '<div><p>Name: {{name}}</p><p>Age: {{age}}</p></div>';
-const template = Handlebars.compile(source);
-const context = { name: "rocks!", age:30 }
-
-document.querySelector('#app').innerHTML = template(context)
+    console.log('loaded!')
+    // if (root) {
+    //     const component = getPage();
+    //     root.append(component.element!);
+    //     component.dispatchComponentDidMount();
+    // }
+});

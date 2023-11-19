@@ -14,30 +14,30 @@ export default {
         rollupOptions: {
             input: {
                 index: resolve(__dirname, "index.html"),
-                auth: resolve(
-                    __dirname,
-                    "src/pages/auth/auth.html",
-                ),
-                registration: resolve(
-                    __dirname,
-                    "src/pages/registration/registration.html",
-                ),
-                edit: resolve(
-                    __dirname,
-                    "src/pages/editProfile/editProfile.html",
-                ),
-                chat: resolve(
-                    __dirname,
-                    "src/pages/chat/chat.html",
-                ),
-                notFound: resolve(
-                    __dirname,
-                    "src/pages/404Page/404Page.html",
-                ),
-                serverError: resolve(
-                    __dirname,
-                    "src/pages/500Page/500Page.html",
-                )
+                // auth: resolve(
+                //     __dirname,
+                //     "src/pages/auth/auth.html",
+                // ),
+                // registration: resolve(
+                //     __dirname,
+                //     "src/pages/registration/registration.html",
+                // ),
+                // edit: resolve(
+                //     __dirname,
+                //     "src/pages/editProfile/editProfile.html",
+                // ),
+                // chat: resolve(
+                //     __dirname,
+                //     "src/pages/chat/chat.html",
+                // ),
+                // notFound: resolve(
+                //     __dirname,
+                //     "src/pages/404Page/404Page.html",
+                // ),
+                // serverError: resolve(
+                //     __dirname,
+                //     "src/pages/500Page/500Page.html",
+                // )
             },
         },
     },

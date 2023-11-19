@@ -5,6 +5,32 @@
 @import "styles/404page";
 @import "styles/500page";
 
+.input-container .invalidInput {
+  border-bottom: 1px solid red;
+}
+
+.error {
+  position: absolute;
+  bottom: 5px;
+  color: red;
+  font-size: 12px;
+  text-align: left;
+}
+
+.displayNone {
+  display: none;
+}
+
+.displayBlock {
+  display: block;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
 
 * {
   box-sizing: border-box;
@@ -54,6 +80,7 @@ body {
 .input-container {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .label {
   color: #999;
