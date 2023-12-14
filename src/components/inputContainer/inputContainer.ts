@@ -1,7 +1,7 @@
 
 import Block from '../../utils/Block';
-import {tmpl} from "./inputContainer.tmpl.ts";
-import {Input} from "../input/input.ts";
+import { tmpl } from './inputContainer.tmpl';
+import { Input } from '../input/input';
 
 interface InputContainerProps {
     label: string,
@@ -25,7 +25,7 @@ export class InputContainer extends Block {
             label: this.props.label,
             labelValue: this.props.labelValue,
             type: this.props.type,
-            events: this.props.events
+            events: this.props.events,
         });
     }
 
