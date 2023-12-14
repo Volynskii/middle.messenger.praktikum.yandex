@@ -1,5 +1,5 @@
 import Block from '../../utils/Block';
-import { tmpl } from './input.tmpl';
+import { tmpl  } from './input.tmpl';
 
 
 interface InputProps {
