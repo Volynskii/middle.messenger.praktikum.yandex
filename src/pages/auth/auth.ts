@@ -1,9 +1,9 @@
-import { Title } from '../../components/title/title.ts';
+import { Title } from '../../components/title/title';
 import Block from '../../utils/Block';
 import { tmpl } from './auth.tmpl';
-import {InputContainer} from "../../components/inputContainer/inputContainer.ts";
-import {InputSubmit} from "../../components/inputSubmit/inputSubmit.ts";
-import {Link} from "../../components/link/link.ts";
+import { InputContainer } from '../../components/inputContainer/inputContainer';
+import { InputSubmit } from '../../components/inputSubmit/inputSubmit';
+import { Link } from '../../components/link/link';
 import { validateLogin, validatePassword } from '../../utils/validations/validation';
 
 interface AuthFormType {

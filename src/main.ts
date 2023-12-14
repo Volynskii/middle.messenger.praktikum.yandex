@@ -1,9 +1,9 @@
 import './styles.scss';
-import {AuthPage} from './pages/auth/auth.ts';
-import { Registration } from './pages/registration/registration.ts';
-import { DefaultPage } from "./pages/defaultPage/defaultPage.ts";
-import {EditProfilePage} from "./pages/editProfile/editProfile.ts";
-import {ChatPage} from "./pages/chat/chat.ts";
+import { AuthPage } from './pages/auth/auth';
+import { Registration } from './pages/registration/registration';
+import { DefaultPage } from './pages/defaultPage/defaultPage';
+import { EditProfilePage } from './pages/editProfile/editProfile';
+import { ChatPage } from './pages/chat/chat';
 
 
 const getPage = () => {
@@ -24,7 +24,6 @@ const getPage = () => {
             return new DefaultPage();
         }
     }
-
 };
 
 window.addEventListener('DOMContentLoaded', () => {

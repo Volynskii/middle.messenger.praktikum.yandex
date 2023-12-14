@@ -1,6 +1,6 @@
 
 import Block from '../../utils/Block';
-import {tmpl} from "./inputSubmit.tmpl.ts";
+import { tmpl } from './inputSubmit.tmpl';
 
 
 interface InputSubmitProps {

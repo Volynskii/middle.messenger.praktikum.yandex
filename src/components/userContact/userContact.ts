@@ -1,6 +1,6 @@
 
 import Block from '../../utils/Block';
-import {tmpl} from "./userContact.tmpl.ts";
+import { tmpl } from './userContact.tmpl';
 
 
 interface InputProps {

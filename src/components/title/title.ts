@@ -1,4 +1,4 @@
-import { tmpl } from './title.tmpl.ts';
+import { tmpl } from './title.tmpl';
 import Block from '../../utils/Block';
 
 
