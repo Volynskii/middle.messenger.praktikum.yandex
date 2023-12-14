@@ -19,20 +19,20 @@ export class AuthPage extends Block {
     init() {
         this.children.titleAuth = new Title({
             title: 'Вход',
-            className:'title-auth'
+            className: 'title-auth',
         });
         this.children.inputContainerLogin = new InputContainer({
-            label:"login",
-            labelValue:"Логин",
-            className:'input-container',
+            label: 'login',
+            labelValue: 'Логин',
+            className: 'input-container',
             type: 'text',
             events: { focus: () => validateLogin() },
             errorMessage: 'неверный логин',
         });
         this.children.inputContainerPassword = new InputContainer({
-            label:"password",
-            labelValue:"Пароль",
-            className:'input-container',
+            label: 'password',
+            labelValue: 'Пароль',
+            className: 'input-container',
             type: 'password',
             events: { focus: () => validatePassword('password') },
             errorMessage: 'неверный пароль',
@@ -45,7 +45,7 @@ export class AuthPage extends Block {
                 }}
         });
         this.children.link = new Link ({
-            text: 'Нет аккаунта?'
+            text: 'Нет аккаунта?',
         })
     }
 

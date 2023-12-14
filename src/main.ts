@@ -28,7 +28,6 @@ const getPage = () => {
 
 window.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('app');
-  console.log('render!')
     if (root) {
         const component = getPage();
         root.append(component.element!);
