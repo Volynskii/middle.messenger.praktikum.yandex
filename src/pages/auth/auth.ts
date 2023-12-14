@@ -39,14 +39,16 @@ export class AuthPage extends Block {
             type: 'password',
             events: { focus: () => validatePassword('password') },
             errorMessage: 'неверный пароль',
-        }
+        },
         );
         this.children.inputSubmit = new InputSubmit({
             value: 'Login',
-            events: { click: (evt: MouseEvent) => {
+            events: { click: (evt: MouseEvent) =>
+                {
                 evt.preventDefault();
                     this.submitForm();
-                }}
+                },
+                },
         });
         this.children.link = new Link (
             {
