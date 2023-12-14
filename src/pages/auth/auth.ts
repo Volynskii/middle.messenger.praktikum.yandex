@@ -21,7 +21,7 @@ export class AuthPage extends Block {
             {
             title: 'Вход',
             className: 'title-auth',
-        }
+        },
         );
         this.children.inputContainerLogin = new InputContainer({
             label: 'login',
@@ -44,13 +44,15 @@ export class AuthPage extends Block {
         this.children.inputSubmit = new InputSubmit({
             value: 'Login',
             events: { click: (evt: MouseEvent) => {
-                evt.preventDefault()
-                    this.submitForm()
+                evt.preventDefault();
+                    this.submitForm();
                 }}
         });
-        this.children.link = new Link ({
+        this.children.link = new Link (
+            {
             text: 'Нет аккаунта?',
-        })
+        }
+        )
     }
 
     render() {
