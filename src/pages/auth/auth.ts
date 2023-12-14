@@ -17,10 +17,12 @@ export class AuthPage extends Block {
     }
 
     init() {
-        this.children.titleAuth = new Title({
+        this.children.titleAuth = new Title(
+            {
             title: 'Вход',
             className: 'title-auth',
-        });
+        }
+        );
         this.children.inputContainerLogin = new InputContainer({
             label: 'login',
             labelValue: 'Логин',
@@ -29,14 +31,16 @@ export class AuthPage extends Block {
             events: { focus: () => validateLogin() },
             errorMessage: 'неверный логин',
         });
-        this.children.inputContainerPassword = new InputContainer({
+        this.children.inputContainerPassword = new InputContainer(
+            {
             label: 'password',
             labelValue: 'Пароль',
             className: 'input-container',
             type: 'password',
             events: { focus: () => validatePassword('password') },
             errorMessage: 'неверный пароль',
-        });
+        }
+        );
         this.children.inputSubmit = new InputSubmit({
             value: 'Login',
             events: { click: (evt: MouseEvent) => {
