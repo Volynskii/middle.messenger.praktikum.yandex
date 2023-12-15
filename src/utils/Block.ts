@@ -5,7 +5,7 @@ import { nanoid } from 'nanoid';
 import { EventBus } from './EventBus';
 
 
-class Block<P extends Record<string, any> = any> {
+class Block<P extends Record<string, unknown> = unknown> {
   static EVENTS = {
     INIT: 'init',
     FLOW_CDM: 'flow:component-did-mount',
@@ -148,7 +148,7 @@ class Block<P extends Record<string, any> = any> {
     this._addEvents();
   }
 
-  protected compile(template: string, context: any) {
+  protected compile(template: string, context: unknown) {
     const contextAndStubs = { ...context };
 
     Object.entries(this.children).forEach(([name, component]) => {
