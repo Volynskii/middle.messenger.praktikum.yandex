@@ -14,10 +14,15 @@ class Block<P extends Record<string, any> = any> {
   } as const;
 
   public id = nanoid(6);
+
   protected props: P;
+
   public children: Record<string, Block | Block[]>; //
+
   private eventBus: () => EventBus;
+
   private _element: HTMLElement | null = null;
+
   private _meta: { tagName: string; props: P; };
 
 
@@ -47,6 +52,7 @@ class Block<P extends Record<string, any> = any> {
         props[key] = value;
       }
     });
+
     return { props: props as P, children };
   }
 
@@ -79,6 +85,7 @@ class Block<P extends Record<string, any> = any> {
     const { tagName } = this._meta;
     this._element = this._createDocumentElement(tagName);
   }
+
   private _init() {
     this._createResources();
     this.init();
@@ -158,7 +165,7 @@ class Block<P extends Record<string, any> = any> {
 
     temp.innerHTML = html;
 
-    const replaceSkeleton = (component: any) => {
+    const replaceSkeleton = (component: unknown) => {
       const dummy = temp.content.querySelector(`[data-id="${component.id}"]`);
       if (dummy == null) {
           return;
