@@ -1,5 +1,5 @@
 const enum HttpMethodsEnum {
-    GET = 'GET',
+        GET = 'GET',
         POST = 'POST',
         PUT = 'PUT',
         DELETE = 'DELETE',
@@ -7,7 +7,7 @@ const enum HttpMethodsEnum {
 
 export type HttpRequestOptions = {
     method?: HttpMethodsEnum;
-    data?: any;
+    data?: unknown;
     headers?: Record<string, string>;
     timeout?: number;
 };
