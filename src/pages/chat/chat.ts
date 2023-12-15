@@ -1,7 +1,7 @@
 import Block from '../../utils/Block';
-import { tmpl } from './chat.tmpl.ts';
-import {UserContact} from "../../components/userContact/userContact.ts";
-import {ChatMessage} from "../../components/chatMessage/chatMessage.ts";
+import { tmpl } from './chat.tmpl';
+import { UserContact } from '../../components/userContact/userContact';
+import { ChatMessage } from '../../components/chatMessage/chatMessage';
 
 
 export class ChatPage extends Block {
@@ -14,22 +14,19 @@ export class ChatPage extends Block {
             name: 'Антон',
             message: 'Привет',
             time: '10:30',
-            unread: 4
+            unread: 4,
         });
         this.children.chatMessage = new ChatMessage({
-            className:'chat__friend-message',
-            message:'Привет!'
+            className: 'chat__friend-message',
+            message: 'Привет!',
         });
         this.children.chatMessage2 = new ChatMessage({
-            className:'chat__your-message',
-            message:'Привет!'
+            className: 'chat__your-message',
+            message: 'Привет!',
         });
-
     }
 
     render() {
-        console.log('this props', this.props)
         return this.compile(tmpl, this.props);
     }
-
 }

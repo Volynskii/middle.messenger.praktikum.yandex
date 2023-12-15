@@ -1,15 +1,15 @@
-import { Title } from '../../components/title/title.ts';
+import { Title } from '../../components/title/title';
 import Block from '../../utils/Block';
-import { tmpl } from './registration.tmpl.ts';
-import {InputContainer} from "../../components/inputContainer/inputContainer.ts";
-import {InputSubmit} from "../../components/inputSubmit/inputSubmit.ts";
-import {Link} from "../../components/link/link.ts";
+import { tmpl } from './registration.tmpl';
+import { InputContainer } from '../../components/inputContainer/inputContainer';
+import { InputSubmit } from '../../components/inputSubmit/inputSubmit';
+import { Link } from '../../components/link/link';
 import {
     validatePhone,
     validateName,
     validateEmail,
     validateLogin,
-    validatePassword
+    validatePassword,
 } from '../../utils/validations/validation';
 
 interface RegistrationFormType {
@@ -30,74 +30,76 @@ export class Registration extends Block {
     init() {
         this.children.titleAuth = new Title({
             title: 'Регистрация',
-            className:'title-registration'
+            className: 'title-registration',
         });
         this.children.inputContainerEmail = new InputContainer({
-            label:"email",
-            labelValue:"Почта",
-            className:'input-container',
+            label: 'email',
+            labelValue: 'Почта',
+            className: 'input-container',
             type: 'text',
             events: { focus: () => validateEmail() },
             errorMessage: 'Неправильный почта',
         });
         this.children.inputContainerFirstName = new InputContainer({
-            label:"first_name",
-            labelValue:"Имя",
-            className:'input-container',
+            label: 'first_name',
+            labelValue: 'Имя',
+            className: 'input-container',
             type: 'text',
             events: { focus: () => validateName('first_name') },
             errorMessage: 'Неправильный имя',
         });
         this.children.inputContainerSecondName = new InputContainer({
-            label:"second_name",
-            labelValue:"Фамилия",
-            className:'input-container',
+            label: 'second_name',
+            labelValue: 'Фамилия',
+            className: 'input-container',
             type: 'text',
             events: { focus: () => validateName('second_name') },
             errorMessage: 'Неправильный фамилия',
         });
         this.children.inputContainerPhone = new InputContainer({
-            label:"phone",
-            labelValue:"Телефон",
-            className:'input-container',
+            label: 'phone',
+            labelValue: 'Телефон',
+            className: 'input-container',
             type: 'text',
             events: { focus: () => validatePhone() },
             errorMessage: 'Неправильный телефон',
         });
         this.children.inputContainerLogin = new InputContainer({
-            label:"login",
-            labelValue:"Логин",
-            className:'input-container',
+            label: 'login',
+            labelValue: 'Логин',
+            className: 'input-container',
             type: 'text',
             events: { focus: () => validateLogin() },
             errorMessage: 'Неправильный логин',
         });
         this.children.inputContainerPassword = new InputContainer({
-            label:"password",
-            labelValue:"Пароль",
-            className:'input-container',
+            label: 'password',
+            labelValue: 'Пароль',
+            className: 'input-container',
             type: 'password',
             events: { focus: () => validatePassword('password') },
             errorMessage: 'Неправильный пароль',
         });
         this.children.inputContainerPasswordAgain = new InputContainer({
-            label:"password_again",
-            labelValue:"Пароль (ещё раз)",
-            className:'input-container',
+            label: 'password_again',
+            labelValue: 'Пароль (ещё раз)',
+            className: 'input-container',
             type: 'password',
             events: { focus: () => validatePassword('password_again') },
             errorMessage: 'Не совпадает',
         });
         this.children.inputSubmit = new InputSubmit({
             value: 'Register',
-            events: { click: (evt: MouseEvent) => {
-                    evt.preventDefault()
-                    this.submitForm()
-                }}
+            events: {
+ click: (evt: MouseEvent) => {
+                    evt.preventDefault();
+                    this.submitForm();
+                },
+},
         });
-        this.children.link = new Link ({
-            text: 'Войти?'
-        })
+        this.children.link = new Link({
+            text: 'Войти?',
+        });
     }
 
     render() {

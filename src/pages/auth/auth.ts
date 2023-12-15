@@ -43,18 +43,18 @@ export class AuthPage extends Block {
         );
         this.children.inputSubmit = new InputSubmit({
             value: 'Login',
-            events: { click: (evt: MouseEvent) =>
-                {
+            events: {
+ click: (evt: MouseEvent) => {
                 evt.preventDefault();
                     this.submitForm();
                 },
                 },
         });
-        this.children.link = new Link (
+        this.children.link = new Link(
             {
             text: 'Нет аккаунта?',
-        }
-        )
+        },
+        );
     }
 
     render() {
@@ -72,8 +72,7 @@ export class AuthPage extends Block {
                 password: password.value,
             };
             console.log(data);
-        }
-        else {
+        } else {
             console.log('not valid');
         }
     }
