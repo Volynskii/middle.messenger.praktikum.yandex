@@ -6,14 +6,15 @@ import {
 export const validation = (name: string, regExp: RegExp) => {
     const input = document.getElementById(name) as HTMLInputElement;
     const error = document.getElementById(`error_${name}`);
-    console.log('input!', input)
-    console.log('error!',error)
+    console.log('input!', input);
+    console.log('error!', error);
 
     if (input?.value) {
       input?.classList.remove('invalidInput');
       error?.classList.add('displayNone');
-      console.log('value!', input.value)
-      console.log('input?.value.match(regExp)',input?.value.match(regExp))
+      console.log('value!', input.value);
+      console.log('input?.value.match(regExp)', input?.value.match(regExp));
+
       return input?.value.match(regExp);
     }
     error?.classList.remove('displayNone');
@@ -23,15 +24,17 @@ export const validation = (name: string, regExp: RegExp) => {
 };
 
 export const validateLogin = () => {
-    console.log('validate login!')
+    console.log('validate login!');
+
   return validation('login', loginRegExp);
 };
 
 export const validateEmail = () => {
-  return validation('email', emailRegExp)
+  return validation('email', emailRegExp);
 };
 
-export const validatePassword = (fieldName: string) => {return validation(fieldName, passwordRegExp)
+export const validatePassword = (fieldName: string) => {
+return validation(fieldName, passwordRegExp);
 };
 
 export const validateRepeatPassword = (fieldName: string, pPasw: string) => {

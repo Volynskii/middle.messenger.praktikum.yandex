@@ -1,19 +1,19 @@
-import Inspect from "vite-plugin-inspect";
-import { resolve } from "path";
-import handlebars from "vite-plugin-handlebars";
+import Inspect from 'vite-plugin-inspect';
+import { resolve } from 'path';
+import handlebars from 'vite-plugin-handlebars';
 
 export default {
     plugins: [
         Inspect(),
         handlebars({
-            partialDirectory: resolve(__dirname, "src/components"),
+            partialDirectory: resolve(__dirname, 'src/components'),
         }),
     ],
     build: {
-        outDir: resolve(__dirname, "dist"),
+        outDir: resolve(__dirname, 'dist'),
         rollupOptions: {
             input: {
-                index: resolve(__dirname, "index.html"),
+                index: resolve(__dirname, 'index.html'),
                 // auth: resolve(
                 //     __dirname,
                 //     "src/pages/auth/auth.html",

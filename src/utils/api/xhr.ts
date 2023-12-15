@@ -14,7 +14,7 @@ export type HttpRequestOptions = {
 
 type HTTPMethod = (url: string, options?: HttpRequestOptions) => Promise<XMLHttpRequest>;
 
-function queryStringify(data: Record<string, any>) {
+function queryStringify(data: Record<string, unknown>) {
     const queryKeys = Object.keys(data);
 
     return queryKeys.reduce((acc, key, index) => `${acc}${key}=${data[key]}${index < queryKeys.length - 1 ? '&' : ''}`, '?');
