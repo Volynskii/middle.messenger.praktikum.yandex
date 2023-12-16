@@ -206,6 +206,7 @@ class Block<P extends Record<string, unknown> = unknown> {
   }
 
   _makePropsProxy(props: P) {
+    // eslint-disable-next-line @typescript-eslint/no-this-alias
     const self = this;
 
     return new Proxy(props, {
