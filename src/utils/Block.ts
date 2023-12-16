@@ -6,7 +6,7 @@ import { nanoid } from 'nanoid';
 import { EventBus } from './EventBus';
 
 // Нельзя создавать экземпляр данного класса
-class Block<P extends Record<string, unknown>> {
+class Block<P extends Record<string, any> = any> {
   static EVENTS = {
     INIT: 'init',
     FLOW_CDM: 'flow:component-did-mount',
@@ -28,7 +28,7 @@ class Block<P extends Record<string, unknown>> {
 
   /** JSDoc
    * @param {string} tagName
-   * @param {Object} props
+   * @param propsWithChildren
    *
    * @returns {void}
    */
@@ -161,7 +161,7 @@ class Block<P extends Record<string, unknown>> {
     this._addEvents();
   }
 
-  protected compile(template: string, context: unknown): DocumentFragment {
+  protected compile(template: string, context: any) {
     const contextAndStubs = { ...context };
 
     Object.entries(this.children).forEach(([name, component]) => {
@@ -178,7 +178,7 @@ class Block<P extends Record<string, unknown>> {
 
     temp.innerHTML = html;
 
-    const replaceSkeleton = (component: unknown) => {
+    const replaceSkeleton = (component: any) => {
       const dummy = temp.content.querySelector(`[data-id="${component.id}"]`);
       if (dummy == null) {
         return;
@@ -219,7 +219,6 @@ class Block<P extends Record<string, unknown>> {
   }
 
   _makePropsProxy(props: P) {
-    // eslint-disable-next-line @typescript-eslint/no-this-alias
     const self = this;
 
     return new Proxy(props, {
