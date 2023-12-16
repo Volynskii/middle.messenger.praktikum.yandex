@@ -162,7 +162,6 @@ class Block<P extends Record<string, unknown>> {
   }
 
   protected compile(template: string, context: unknown): DocumentFragment {
-
     const contextAndStubs = { ...context };
 
     Object.entries(this.children).forEach(([name, component]) => {
