@@ -162,7 +162,7 @@ class Block<P extends Record<string, unknown>> {
   }
 
   protected compile(template: string, context: unknown): DocumentFragment {
-    // @ts-ignore
+    // @ts-expect-error
     const contextAndStubs = { ...context };
 
     Object.entries(this.children).forEach(([name, component]) => {
