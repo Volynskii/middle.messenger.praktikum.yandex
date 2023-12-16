@@ -161,7 +161,8 @@ class Block<P extends Record<string, unknown>> {
     this._addEvents();
   }
 
-  protected compile(template: string, context: any) {
+  protected compile(template: string, context: unknown): DocumentFragment {
+    // @ts-ignore
     const contextAndStubs = { ...context };
 
     Object.entries(this.children).forEach(([name, component]) => {
@@ -178,7 +179,7 @@ class Block<P extends Record<string, unknown>> {
 
     temp.innerHTML = html;
 
-    const replaceSkeleton = (component: any) => {
+    const replaceSkeleton = (component: unknown) => {
       const dummy = temp.content.querySelector(`[data-id="${component.id}"]`);
       if (dummy == null) {
         return;
