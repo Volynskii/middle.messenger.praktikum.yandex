@@ -4,8 +4,6 @@ import Handlebars from 'handlebars';
 import { nanoid } from 'nanoid';
 import { EventBus } from './EventBus';
 
-
-
 class Block<P extends Record<string, string>> {
   static EVENTS = {
     INIT: 'init',
