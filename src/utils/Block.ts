@@ -2,9 +2,11 @@
 /* eslint-disable @typescript-eslint/default-param-last */
 import Handlebars from 'handlebars';
 import { nanoid } from 'nanoid';
+
 import { EventBus } from './EventBus';
 
-class Block<P extends Record<string, string>> {
+// Нельзя создавать экземпляр данного класса
+class Block<P extends Record<string, any> = any> {
   static EVENTS = {
     INIT: 'init',
     FLOW_CDM: 'flow:component-did-mount',
@@ -24,19 +26,29 @@ class Block<P extends Record<string, string>> {
 
   private _meta: { tagName: string; props: P; };
 
-
+  /** JSDoc
+   * @param {string} tagName
+   * @param {Object} props
+   *
+   * @returns {void}
+   */
   constructor(tagName = 'div', propsWithChildren: P) {
     const eventBus = new EventBus();
+
     const { props, children } = this._getChildrenAndProps(propsWithChildren);
 
     this._meta = {
       tagName,
       props: props as P,
     };
+
     this.children = children;
     this.props = this._makePropsProxy(props);
+
     this.eventBus = () => { return eventBus; };
+
     this._registerEvents(eventBus);
+
     eventBus.emit(Block.EVENTS.INIT);
   }
 
@@ -74,9 +86,9 @@ class Block<P extends Record<string, string>> {
     const { events } = this.props;
 
     if (events != null) {
-        Object.keys(events).forEach((eventName) => {
-            this._element?.removeEventListener(eventName, events[eventName]);
-        });
+      Object.keys(events).forEach((eventName) => {
+        this._element?.removeEventListener(eventName, events[eventName]);
+      });
     }
   }
 
@@ -87,7 +99,9 @@ class Block<P extends Record<string, string>> {
 
   private _init() {
     this._createResources();
+
     this.init();
+
     this.eventBus().emit(Block.EVENTS.FLOW_RENDER);
   }
 
@@ -104,11 +118,11 @@ class Block<P extends Record<string, string>> {
 
     Object.values(this.children).forEach((child) => {
       if (Array.isArray(child)) {
-          child.forEach((ch) => ch.dispatchComponentDidMount());
+        child.forEach((ch) => ch.dispatchComponentDidMount());
       } else {
-          child.dispatchComponentDidMount();
+        child.dispatchComponentDidMount();
       }
-  });
+    });
   }
 
   private _componentDidUpdate(oldProps: P, newProps: P) {
@@ -118,7 +132,7 @@ class Block<P extends Record<string, string>> {
   }
 
   protected componentDidUpdate(oldProps: P, newProps: P) {
-  // protected componentDidUpdate() {
+    // protected componentDidUpdate() {
     // eslint-disable-next-line no-console
     console.log(oldProps, newProps);
 
@@ -147,15 +161,15 @@ class Block<P extends Record<string, string>> {
     this._addEvents();
   }
 
-  protected compile(template: string, context: unknown) {
+  protected compile(template: string, context: any) {
     const contextAndStubs = { ...context };
 
     Object.entries(this.children).forEach(([name, component]) => {
-        if (Array.isArray(component)) {
-          contextAndStubs[name] = component.map((child) => `<div data-id="${child.id}"></div>`);
-        } else {
-          contextAndStubs[name] = `<div data-id="${component.id}"></div>`;
-        }
+      if (Array.isArray(component)) {
+        contextAndStubs[name] = component.map((child) => `<div data-id="${child.id}"></div>`);
+      } else {
+        contextAndStubs[name] = `<div data-id="${component.id}"></div>`;
+      }
     });
 
     const html = Handlebars.compile(template)(contextAndStubs);
@@ -164,10 +178,10 @@ class Block<P extends Record<string, string>> {
 
     temp.innerHTML = html;
 
-    const replaceSkeleton = (component: unknown) => {
+    const replaceSkeleton = (component: any) => {
       const dummy = temp.content.querySelector(`[data-id="${component.id}"]`);
       if (dummy == null) {
-          return;
+        return;
       }
 
       component.getContent()?.append(...Array.from(dummy.childNodes));
@@ -175,11 +189,11 @@ class Block<P extends Record<string, string>> {
     };
 
     Object.entries(this.children).forEach(([_, component]) => {
-        if (Array.isArray(component)) {
-            component.forEach((comp) => replaceSkeleton(comp));
-        } else {
-            replaceSkeleton(component);
-        }
+      if (Array.isArray(component)) {
+        component.forEach((comp) => replaceSkeleton(comp));
+      } else {
+        replaceSkeleton(component);
+      }
     });
 
     return temp.content;
@@ -188,11 +202,11 @@ class Block<P extends Record<string, string>> {
   protected removeEvents() {
     this._removeEvents();
     Object.keys(this.children).forEach((child) => {
-        if (Array.isArray(this.children[child])) {
-            (this.children[child] as Block<P>[]).forEach((ch) => ch.removeEvents());
-        } else {
-            (this.children[child] as Block<P>).removeEvents();
-        }
+      if (Array.isArray(this.children[child])) {
+        (this.children[child] as Block<P>[]).forEach((ch) => ch.removeEvents());
+      } else {
+        (this.children[child] as Block<P>).removeEvents();
+      }
     });
   }
 
@@ -205,7 +219,6 @@ class Block<P extends Record<string, string>> {
   }
 
   _makePropsProxy(props: P) {
-    // eslint-disable-next-line @typescript-eslint/no-this-alias
     const self = this;
 
     return new Proxy(props, {
