@@ -6,7 +6,7 @@ import { nanoid } from 'nanoid';
 import { EventBus } from './EventBus';
 
 // Нельзя создавать экземпляр данного класса
-class Block<P extends Record<string, any> = any> {
+class Block<P extends Record<string, unknown>> {
   static EVENTS = {
     INIT: 'init',
     FLOW_CDM: 'flow:component-did-mount',
@@ -219,6 +219,7 @@ class Block<P extends Record<string, any> = any> {
   }
 
   _makePropsProxy(props: P) {
+    // eslint-disable-next-line @typescript-eslint/no-this-alias
     const self = this;
 
     return new Proxy(props, {
