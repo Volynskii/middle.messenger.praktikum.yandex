@@ -13,7 +13,7 @@ export class ErrorMessage extends Block {
     }
 
     init() {
-        this.element!.className = this.props.className ? this.props.className :`message`;
+        this.element!.className = this.props.className ? this.props.className : `message`;
         this.element!.innerText = this.props.message;
     }
 

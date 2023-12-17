@@ -5,7 +5,7 @@ import { DefaultPage } from './pages/defaultPage/defaultPage';
 import { EditProfilePage } from './pages/editProfile/editProfile';
 import { ChatPage } from './pages/chat/chat';
 import { Page404 } from './pages/404Page/Page404';
-import { Page500 } from "./pages/500Page/Page500";
+import { Page500 } from './pages/500Page/Page500';
 
 
 const getPage = () => {
