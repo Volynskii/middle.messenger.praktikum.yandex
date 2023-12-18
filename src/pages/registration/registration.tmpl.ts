@@ -1,7 +1,7 @@
 
 export const tmpl = `
    
-<main class="auth">
+<section class="auth">
 <div class="wrapper-registration">
     {{{titleAuth}}}
     <form class="form">
@@ -16,5 +16,5 @@ export const tmpl = `
       {{{link}}}
     </form>
 </div>
-</main>
+</section>
 `;

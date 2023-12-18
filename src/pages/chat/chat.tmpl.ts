@@ -1,6 +1,6 @@
 
 export const tmpl = `
-<main class="container chat-wrapper black-color">
+<section class="container chat-wrapper black-color">
     <section class="sidebar">
         <div class="wrapper-sidebar">
             <h1 class="title">Профиль</h1>
@@ -43,5 +43,5 @@ export const tmpl = `
             </form>
         </section>
     </section>
-</main>
+</section>
 `;
