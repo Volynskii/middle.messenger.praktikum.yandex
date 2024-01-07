@@ -9,9 +9,9 @@
   width: 25%;
   min-width: 350px;
   height: 100vh;
-  position: sticky; /* Ensure the container has a defined position */
+  position: sticky;
   top: 0;
-  border: 1px solid #ccc; /* Just for visualization */
+  border: 1px solid #ccc;
   overflow: hidden;
 }
 
@@ -30,17 +30,19 @@
   outline: 0;
   padding: 10px;
 }
+
 .sidebar-input:focus {
   outline: none;
   border-bottom: 1px solid #3369F3;
 }
+
 .sidebar h1 {
   color: #999;
   text-align: right;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
-  line-height: 12px; /* 100% */
+  line-height: 12px;
   padding-right: 10px;
 }
 
@@ -48,6 +50,7 @@
   list-style: none;
   padding: 0;
   height: 100vh;
+  width: 100%;
   overflow-y: auto;
 }
 
@@ -81,8 +84,9 @@
   font-size: 13px;
   font-style: normal;
   font-weight: 600;
-  line-height: 13px; /* 100% */
+  line-height: 13px;
 }
+
 .list-item__message {
   font-size: 12px;
   font-style: normal;
@@ -97,7 +101,6 @@
   position: relative;
 }
 
-
 .list-item__date {
   display: flex;
   flex-direction: column;
@@ -107,14 +110,16 @@
   margin-left: 10px;
   flex: 0 0 47px;
 }
+
 .list-item__time {
   color: #999;
   text-align: right;
   font-size: 9px;
   font-style: normal;
   font-weight: 500;
-  line-height: 13px; /* 144.444% */
+  line-height: 13px;
 }
+
 .list-item__unread {
   display: flex;
   justify-content: center;
@@ -127,16 +132,13 @@
   font-size: 11px;
   font-style: normal;
   font-weight: 500;
-  line-height: 12px; /* 109.091% */
+  line-height: 12px;
   border-radius: 50%;
 
   p {
     color: white;
   }
 }
-
-
-
 
 .main-chat {
   display: flex;
@@ -145,7 +147,6 @@
   margin: 0 20px;
   position: sticky;
   top: 0;
-
 
   .main-chat__header {
     flex: 0 0 90px;
@@ -178,9 +179,11 @@
     padding: 15px;
     color: #1E1E1E;
   }
+
   .main-chat__user-actions li {
     margin-bottom: 24px;
   }
+
   .main-chat__user-actions li:last-child {
     margin-bottom: 0;
   }
@@ -220,26 +223,30 @@
     margin-top: auto;
     width: 100%;
   }
+
   .input__upload-button {
     display: flex;
     flex: 0 0 32px;
     margin-right: 20px;
     background-image: url('/public/upload.svg');
-    background-size: cover; /* You can adjust this property to control how the image is sized. */
-    background-repeat: no-repeat; /* Prevent the image from repeating. */
-    background-position: center center; /* Center the image both horizontally and vertically. */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
+
   .input__form {
     display: flex;
     align-items: stretch;
     flex: 1;
   }
+
   .input-container {
     display: flex;
     flex-direction: row;
     align-items: stretch;
     flex: 1;
   }
+
   .input__message {
     display: flex;
     flex: 1;
@@ -247,7 +254,6 @@
     background: #EFEFEF;
     border: 0;
     padding-left: 20px;
-
   }
 
   .submit {
@@ -257,9 +263,6 @@
     border: 0;
     height: auto;
     padding: 0;
-    background-size: cover; /* You can adjust this property to control how the image is sized. */
-    /* Prevent the image from repeating. */
-    /* Center the image both horizontally and vertically. */
-    background: transparent url('/public/submit.svg') no-repeat center center;
+    background: transparent url('/public/submit.svg') no-repeat center center / cover;
   }
 }

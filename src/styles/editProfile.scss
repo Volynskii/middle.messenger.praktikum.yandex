@@ -2,25 +2,22 @@
   height: 100vh;
   display: flex;
   flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
+  place-content: center;
 }
-
 
 input[type="file" i] {
   border-bottom: 0;
 }
-img#uploadedImage {
+
+#uploaded-image {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   background-image: url('/public/upload-image-bg.svg');
-  /* You can also specify additional CSS properties like background size, repeat, position, etc. */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-
 
 .wrapper-edit {
   display: flex;
@@ -28,5 +25,5 @@ img#uploadedImage {
   align-items: center;
   width: 340px;
   padding-bottom: 40px;
-  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.14);
 }
